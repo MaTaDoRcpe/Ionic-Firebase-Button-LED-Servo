@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      <h1>
+        ไอทีมหานคร
+      </h1>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <button ion-button (click)="btnLedOn()">LED ON</button>
+    <button ion-button color="danger" (click)="btnLedOff()">LED OFF</button>
+    <br/>
+    <ion-range min="0" max="180" [(ngModel)]="saturation" color="secondary" (ionChange)="rangeChange(saturation)">
+      <ion-label range-left>0</ion-label>
+      <ion-label range-right>{{saturation}}</ion-label>
+    </ion-range>
+    <br/>
+    <button ion-button color="myGreen" (click)="btnGreen()">เขียว</button>
+    <button ion-button color="myPink" (click)="btnPink()">ชมพู</button>
+    <button ion-button color="myBlue" (click)="btnBlue()">ฟ้า</button>
+    <button ion-button color="myYellow" (click)="btnYellow()">เหลือง</button>
+</ion-content>
